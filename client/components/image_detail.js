@@ -1,6 +1,8 @@
 import React from 'react';
+import ImageScore from './image_score';
 
 const ImageDetail = (props) => {
+	//These are example of how to use the images from Imgur 
 	//props.image => this is the image object 
 	//props.image.title
 	//props.image.link
@@ -14,6 +16,8 @@ const ImageDetail = (props) => {
 				<h4 className="media-heading">
 					{props.image.title}
 				</h4>
+				<p>{ props.image.description }</p>
+				<ImageScore ups={ props.image.ups } downs={ props.image.downs } />
 			</div>
 		</li>
 	);
